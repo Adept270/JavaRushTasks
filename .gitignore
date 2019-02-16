@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+JavaRushPlugin.properties
 
 # BlueJ files
 *.ctxt
