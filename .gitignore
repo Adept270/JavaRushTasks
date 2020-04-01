@@ -6,7 +6,6 @@ out
 # Log file
 *.logg
 JavaRushPlugin.properties
-
 # BlueJ files
 *.ctxt
 
