@@ -1,7 +1,6 @@
 package com.javarush.task.task36.task3611;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /* 
 Сколько у человека потенциальных друзей?
@@ -20,8 +19,41 @@ public class Solution {
         System.out.println(potentialFriends);                                           // Expected: [2, 5, 7]
     }
 
+    private Set<Integer> getFriendSet(int index) {
+        Set<Integer> friendSet = new HashSet<>();
+        if (index >= humanRelationships.length) {
+            throw new IllegalArgumentException();
+        }
+
+        for (int i = 0; i < humanRelationships.length; i++) {
+            if (i < index && humanRelationships[index][i]) {
+                friendSet.add(i);
+            } else if (i > index && humanRelationships[i][index]) {
+                friendSet.add(i);
+            }
+        }
+
+        return friendSet;
+    }
+
     public Set<Integer> getAllFriendsAndPotentialFriends(int index, int deep) {
         //напишите тут ваш код
+        Set<Integer> resultSet = new HashSet<>();
+        Set<Integer> innerSet = new HashSet<>(getFriendSet(index));
+        PriorityQueue<Integer> queue = new PriorityQueue<>(getFriendSet(index));
+
+        for (int i = 0; i < deep; i++) {
+            resultSet.addAll(innerSet);
+            queue.addAll(innerSet);
+            innerSet.clear();
+
+            while (!queue.isEmpty()) {
+                int tempFriend = queue.poll();
+                innerSet.addAll(getFriendSet(tempFriend));
+            }
+        }
+        resultSet.remove(index);
+        return resultSet;
     }
 
     // Remove from the set the people with whom you already have a relationship
