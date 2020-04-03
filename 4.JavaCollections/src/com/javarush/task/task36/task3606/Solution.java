@@ -43,7 +43,7 @@ public class Solution {
         for (Class<?> clazz : hiddenClasses) {
             if (clazz.getSimpleName().toLowerCase().startsWith(key.toLowerCase())) {
                 try {
-                    Constructor[] constructors = clazz.getConstructors();
+                    Constructor[] constructors = clazz.getDeclaredConstructors();
                     for (Constructor constructor : constructors) {
                         if (constructor.getParameterTypes().length == 0) {
                             constructor.setAccessible(true);
