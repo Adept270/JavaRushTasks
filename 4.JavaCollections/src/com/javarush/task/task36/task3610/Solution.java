@@ -1,5 +1,8 @@
 package com.javarush.task.task36.task3610;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 /* 
@@ -29,5 +32,6 @@ public class Solution {
         System.out.println(map.containsKey(5));         // Expected: true
         System.out.println(map.containsValue(57));      // Expected: true
         System.out.println(map.containsValue(7));       // Expected: false
+        System.out.println(map.remove(1));
     }
 }
