@@ -1,5 +1,6 @@
 package com.javarush.task.task36.task3612;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -34,6 +35,9 @@ public class Solution {
     }
 
     protected void updateLastDate(long delta) {
+        dates.remove(lastDate);
         lastDate.setTime(lastDate.getTime() + delta);
+        dates.add(lastDate);
     }
+
 }
