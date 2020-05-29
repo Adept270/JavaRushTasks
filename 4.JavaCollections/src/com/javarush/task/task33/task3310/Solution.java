@@ -1,8 +1,10 @@
 package com.javarush.task.task33.task3310;
 
+import com.javarush.task.task33.task3310.strategy.DataBaseStorageStrategy;
 import com.javarush.task.task33.task3310.strategy.HashMapStorageStrategy;
 import com.javarush.task.task33.task3310.strategy.StorageStrategy;
 
+import java.sql.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,8 +12,17 @@ import java.util.zip.DataFormatException;
 
 public class Solution {
     public static void main(String[] args) {
-        HashMapStorageStrategy hashMapStorageStrategy = new HashMapStorageStrategy();
-        testStrategy(hashMapStorageStrategy, 10000);
+//        HashMapStorageStrategy hashMapStorageStrategy = new HashMapStorageStrategy();
+//        testStrategy(hashMapStorageStrategy, 10000);
+
+        DataBaseStorageStrategy dataBaseStorageStrategy = new DataBaseStorageStrategy();
+        dataBaseStorageStrategy.put(1L, "one");
+        System.out.println(dataBaseStorageStrategy.containsValue("one"));
+        System.out.println(dataBaseStorageStrategy.containsKey(1L));
+        System.out.println(dataBaseStorageStrategy.getKey("one"));
+        System.out.println(dataBaseStorageStrategy.getValue(1L));
+        dataBaseStorageStrategy.close();
+
     }
 
     public static Set<Long> getIds(Shortener shortener, Set<String> strings) {

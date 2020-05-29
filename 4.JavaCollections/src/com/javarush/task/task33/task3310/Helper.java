@@ -4,10 +4,10 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 
 public class Helper {
-    static String generateRandomString() {
+    public static String generateRandomString() {
         return new BigInteger(130, new SecureRandom()).toString(36);
     }
-    static void printMessage(String message) {
+    public static void printMessage(String message) {
         System.out.println(message);
     }
 }
