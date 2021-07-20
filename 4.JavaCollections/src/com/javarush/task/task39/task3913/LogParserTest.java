@@ -16,9 +16,7 @@ public class LogParserTest {
     public void testFind() throws IOException {
 //        LogParser logParser = new LogParser(Path.of("C:/Users/16727641/Documents/Java/JavaRushTasks/4.JavaCollections/src/com/javarush/task/task39/task3913/logs/"));
 //
-//
-//        System.out.println("============");
-//
-//        logParser.getNumberOfUniqueIPs(new Date(), new Date());
+//        logParser.execute("Hello Jon !");
+
     }
 }
