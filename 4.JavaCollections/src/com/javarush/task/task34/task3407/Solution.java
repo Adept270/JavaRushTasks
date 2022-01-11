@@ -4,6 +4,7 @@ import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
 import java.util.ArrayList;
 import java.util.List;
+import java.math.BigDecimal;
 
 /* 
 Призрачные ссылки

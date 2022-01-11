@@ -12,6 +12,8 @@
     <orderEntry type="library" name="jackson-annotations-2.9.8" level="project" />
     <orderEntry type="library" name="com.guicedee.services:commons-collections4:0.70.0.7" level="project" />
     <orderEntry type="library" name="junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="aspectjweaver-1.9.6" level="application" />
+    <orderEntry type="library" name="slf4j-1.7" level="application" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.4.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
@@ -27,5 +29,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.powermock:powermock-core:2.0.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.javassist:javassist:3.27.0-GA" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.13.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
   </component>
 </module>

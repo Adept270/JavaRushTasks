@@ -14,8 +14,8 @@ public class Solution {
         zoo.animals.add(dog);
         zoo.animals.add(cat);
 
-        String result = new ObjectMapper().writeValueAsString(zoo);
+//        String result = new ObjectMapper().writeValueAsString(zoo);
 
-        System.out.println(result);
+//        System.out.println(result);
     }
 }
